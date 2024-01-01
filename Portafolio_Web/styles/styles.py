@@ -3,11 +3,16 @@ from .fonts import Font
 from .colors import Color, TextColor
 from enum import Enum
 
+MAX_WIDTH = "1000px"
+FLEX_DIRECTION = ["column", "column", "column", "row", "row"]
 
 class Size(Enum):
-    SMALL ="0.5em"
+    ZERO = "0px !important"
+    SMALL = "0.5em"
+    MEDIUM = "0.8em"
     DEFAULT = "1em"
     BIG = "2em"
+    BUTTON = "2.75em"
     VERY_BIG = "4em"
     
 
@@ -20,4 +25,34 @@ BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "color": TextColor.PRIMARY.value,
     "background_color": Color.BACKGROUND.value,
+    
+    rx.Heading: {
+        "font_family": Font.DEFAULT.value,
+        "color": TextColor.ACCENT.value
+    },
+    rx.Link: {
+        "text_decoration": "none",
+        "_hover": {
+            "color": TextColor.ACCENT.value,
+            "text_decoration": "none"
+        }
+    },
+    rx.Span: {
+        "font_size": Size.MEDIUM.value
+    },
+    rx.Button: {
+        "margin_bottom": Size.DEFAULT.value,
+        "height": Size.BUTTON.value,
+        "color": f"{TextColor.SECONDARY.value} !important",
+        "_hover": {
+            "color": f"{TextColor.PRIMARY.value} !important"
+        }
+    }
 }
+
+max_width_style = dict(
+    align_items="start",
+    padding_x=Size.BIG.value,
+    width="100%",
+    max_width=MAX_WIDTH
+)

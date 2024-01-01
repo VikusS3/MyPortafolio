@@ -27,8 +27,8 @@ def navbar() -> rx.Component:
                  constants.GITHUB_URL,
             ),
             link_icon(
-                "gmail",
-                constants.MY_EMAIL,
+                "twitter",
+                constants.TWITTER_X_URL,
             ),
             width="100%",           
         ),
