@@ -6,11 +6,10 @@ def skills() -> rx.Component:
     return rx.box(
         rx.center( 
             rx.stack(
-                rx.text("Estas son mis habilidades en el desarrollo web y de software"),
+                rx.text("Estas son mis habilidades en el Desarrollo web y de Software"),
                 padding_y=10,
             ),
         ),
-        
         rx.grid(
             image_skill(
                 "/imgs/python.png",
