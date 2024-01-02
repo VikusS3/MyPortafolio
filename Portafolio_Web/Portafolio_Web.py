@@ -2,6 +2,7 @@ import reflex as rx
 import Portafolio_Web.styles.styles as styles
 from Portafolio_Web.views.navbar import navbar
 from Portafolio_Web.views.header import header
+from Portafolio_Web.views.skills import skills
 
 
 def index()-> rx.Component:
@@ -12,6 +13,7 @@ def index()-> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
+                skills(),
                 widht="100%",
                 spacing=styles.Size.BIG.value,
             ),    

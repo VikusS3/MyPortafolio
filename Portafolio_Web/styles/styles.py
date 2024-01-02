@@ -14,6 +14,7 @@ class Size(Enum):
     BIG = "2em"
     BUTTON = "2.75em"
     VERY_BIG = "4em"
+    ULTRA_BIG = "10em"
     
 
 STYLESHEETS = [
