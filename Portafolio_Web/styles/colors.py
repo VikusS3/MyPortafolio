@@ -7,7 +7,8 @@ class Color(Enum):
     BACKGROUND = "#1a1e29"
     
 class TextColor(Enum):
-    ACCENT = "#b5b0b0"
+    ACCENT = "#ffffff"
     PRIMARY = "#FFFFFF"
     SECONDARY = "#212529"
     BACKGROUND = "#d3d3d3"
+    FOOTER_COLOR = "#01c38e"

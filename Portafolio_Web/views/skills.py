@@ -1,15 +1,9 @@
 import reflex as rx
 from Portafolio_Web.components.image_skill import image_skill
-
+from Portafolio_Web.styles.styles import Size
 
 def skills() -> rx.Component:
     return rx.box(
-        rx.center( 
-            rx.stack(
-                rx.text("Estas son mis habilidades en el Desarrollo web y de Software"),
-                padding_y=10,
-            ),
-        ),
         rx.grid(
             image_skill(
                 "/imgs/python.png",
@@ -60,7 +54,7 @@ def skills() -> rx.Component:
                 "MySQL",
             ),
             template_columns="repeat(4, 1fr)",
-            gap=10,
+            gap=9,
         ),
     )
     

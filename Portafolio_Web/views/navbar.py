@@ -1,14 +1,14 @@
 import reflex as rx
 from Portafolio_Web.styles.styles import Size
 from Portafolio_Web.components.link_icon import link_icon
-from Portafolio_Web.styles.colors import Color, TextColor
+from Portafolio_Web.styles.colors import Color
 import Portafolio_Web.constants as constants
 
 def navbar() -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.image(
-                src="logo.png",
+                src="/imgs/logo.png",
                 alt="Imagen con las letras VD",
                 width=Size.BIG.value,
                 height=Size.BIG.value,      
@@ -18,8 +18,8 @@ def navbar() -> rx.Component:
             
             rx.tablet_and_desktop(
                 link_icon(
-                    "linkedin",
-                    constants.LINKEDIN_URL,  
+                    "twitch",
+                    constants.TWITCH_URL,  
                 ),  
             ),
             link_icon(
@@ -40,6 +40,5 @@ def navbar() -> rx.Component:
         z_index=999,
         top=0,
         width="100%",
-          
     )
     

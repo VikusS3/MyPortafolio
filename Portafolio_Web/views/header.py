@@ -1,6 +1,6 @@
 import reflex as rx
 from Portafolio_Web.styles.styles import Size
-from Portafolio_Web.styles.colors import Color, TextColor
+from Portafolio_Web.styles.colors import Color
 import Portafolio_Web.constants as constants
 from Portafolio_Web.components.button import button
 import Portafolio_Web.styles.styles as styles
@@ -9,7 +9,7 @@ def header() -> rx.Component:
     return rx.vstack( 
         rx.flex(
             rx.image(
-                src="inicio.png",
+                src="/imgs/inicio.png",
                 alt="Letra V de color blanco sin fondo",
                 width="16em",
                 height="30em",
